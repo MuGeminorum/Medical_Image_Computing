@@ -15,7 +15,6 @@ from skimage import io
 from skimage import feature
 import cv2
 from scipy import ndimage
-%pylab inline
 import matplotlib.pyplot as plt
 
 D = io.imread("data/attention-mri.tif")
