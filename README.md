@@ -23,16 +23,7 @@ The MRI data, D, is stored as a 157-by-189-by-68 NumPy array. You can show image
 
 Edge provides critical information about the shape of the region of interest (ROI) and serves as an important step in many segmentation algorithms. In this task, we work on the data in the axial view at slice 16 for edge detection. 
  
-(1)	Please calculate the image gradients along x and y directions with the function cv2.Sobel(), and the gradient magnitude using Numpy.sqrt() function, and plot image gradients ("Gx", "Gy") as well as gradient magnitude ("Gmat") using imshow() function. 
- 
-(2)	Please define the Prewitt kernels in both x and y directions, and use the cv2.filter2D() function to complete prewitt edge filtering. 
- 
-(3)	Please conducting a Canny edge detection with the function of feature.canny() and plot the results using imshow() function. Please briefly explain Canny edge detection. What are the values and meaning of the double thresholds used in your canny edge detection? 
-Please change the lower and upper thresholds to (2, 5) and (3, 15), respectively; How does the edge detection change? 
- 
-(4)	What is spatial frequency? Are edge filters low-pass filtering operation or high-pass filtering operation?
-
-### Answer of (1)
+(1)	Please calculate the image gradients along x and y directions with the function cv2.Sobel(), and the gradient magnitude using Numpy.sqrt() function, and plot image gradients ("Gx", "Gy") as well as gradient magnitude ("Gmat") using imshow() function.
 
 <div align=center>
 <img width="605" src="https://george-chou.github.io/covers/MSSC/f3.png"/><br>
@@ -44,7 +35,7 @@ Please change the lower and upper thresholds to (2, 5) and (3, 15), respectively
 <b>Figure 4: Results of task 2(1)</b>
 </div>
 
-### Answer of (2)
+(2)	Please define the Prewitt kernels in both x and y directions, and use the cv2.filter2D() function to complete prewitt edge filtering.
 
 <div align=center>
 <img width="605" src="https://george-chou.github.io/covers/MSSC/f5.png"/><br>
@@ -56,7 +47,7 @@ Please change the lower and upper thresholds to (2, 5) and (3, 15), respectively
 <b>Figure 6: Results of task 2(2)</b>
 </div>
 
-### Answer of (3)
+(3)	Please conducting a Canny edge detection with the function of feature.canny() and plot the results using imshow() function. Please briefly explain Canny edge detection. What are the values and meaning of the double thresholds used in your canny edge detection? Please change the lower and upper thresholds to (2, 5) and (3, 15), respectively; How does the edge detection change?
 
 <div align=center>
 <img width="605" src="https://george-chou.github.io/covers/MSSC/f7.png"/><br>
@@ -68,33 +59,19 @@ Please change the lower and upper thresholds to (2, 5) and (3, 15), respectively
 <b>Figure 8: Results of task 2(3)</b>
 </div>
 
-### Answer of (4)
+(4)	What is spatial frequency? Are edge filters low-pass filtering operation or high-pass filtering operation?
 
-The spatial frequency is an independent variable to describe the characteristics of an image. It can decompose the spatial change of an image pixel value into a linear superposition of simple vibration functions with different amplitudes, spatial frequencies and phases. The composition and distribution of this spatial frequency component is called the spatial frequency spectrum. 
- 
-Edge filters belong to high-pass filtering operation.
+The spatial frequency is an independent variable to describe the characteristics of an image. It can decompose the spatial change of an image pixel value into a linear superposition of simple vibration functions with different amplitudes, spatial frequencies and phases. The composition and distribution of this spatial frequency component is called the spatial frequency spectrum. Edge filters belong to high-pass filtering operation.
 
 ## Kmeans clustering
 
-(1)	Please describe the process of k-means clustering. What is the difference between supervised and unsupervised methods? What are their advantages and disadvantages? 
- 
-(2)	Import KMeans from the sklearn.cluster package. 
- 
-(3)	Please group the pixels in slice 16 using the function of KMeans(). Show the results with 4, 8, 20 clusters, respectively. 
- 
-To show the results, please replace the intensity value at each pixel with the intensity value of its corresponding cluster centres and display the resulting image use the function imshow(). This will give each cluster a unique colour. Please compare the results. 
- 
-(4)	If you repeat the algorithm for several times, will the results change? 
- 
-(5)	If 4 clusters are to be generated, please plot the relationship between withincluster sums of point-to-centroid distances (kmeans.inertia) and number of iterations (kmeans.n_iter). The x-axis corresponds to the number of iterations and the y-axis corresponds to the within-cluster sums. 
-
-### Answer of (1)
+(1)	Please describe the process of k-means clustering. What is the difference between supervised and unsupervised methods? What are their advantages and disadvantages?
 
 Basic steps of k-means algorithm: 
-(1)	Select k objects from the data as the initial cluster centres; 
-(2)	Calculate the distance of each cluster object to the cluster centre to divide; 
-(3)	Calculate each cluster centre again; 
-(4)	Calculate the standard measurement function. If the method reaches the maximum number of iterations, stop, otherwise, continue the operation. 
+a)	Select k objects from the data as the initial cluster centres; 
+b)	Calculate the distance of each cluster object to the cluster centre to divide; 
+c)	Calculate each cluster centre again; 
+d)	Calculate the standard measurement function. If the method reaches the maximum number of iterations, stop, otherwise, continue the operation.
 
 <div align=center>
 <img width="605" src="https://george-chou.github.io/covers/MSSC/f9.png"/><br>
@@ -111,11 +88,11 @@ Basic steps of k-means algorithm:
 <img width="605" src="https://george-chou.github.io/covers/HEp-2/t2.PNG"/>
 </div>
 
-### Answer of (2)
+(2)	Import KMeans from the sklearn.cluster package.
 
 `from sklearn.cluster import KMeans`
 
-### Answer of (3)
+(3)	Please group the pixels in slice 16 using the function of KMeans(). Show the results with 4, 8, 20 clusters, respectively. To show the results, please replace the intensity value at each pixel with the intensity value of its corresponding cluster centres and display the resulting image use the function imshow(). This will give each cluster a unique colour. Please compare the results.
 
 <div align=center>
 <img width="605" src="https://george-chou.github.io/covers/MSSC/f10.png"/><br>
@@ -127,7 +104,7 @@ Basic steps of k-means algorithm:
 <b>Figure 11: Results of task 3(3)</b>
 </div>
 
-### Answer of (4)
+(4)	If you repeat the algorithm for several times, will the results change?
 
 The results slightly change after the algorithm is repeated for several times:
 
@@ -136,7 +113,7 @@ The results slightly change after the algorithm is repeated for several times:
 <b>Figure 12: Results of task 3(4)</b>
 </div>
 
-### Answer of (5)
+(5)	If 4 clusters are to be generated, please plot the relationship between withincluster sums of point-to-centroid distances (kmeans.inertia) and number of iterations (kmeans.n_iter). The x-axis corresponds to the number of iterations and the y-axis corresponds to the within-cluster sums.
 
 <div align=center>
 <img width="605" src="https://george-chou.github.io/covers/MSSC/f13.png"/><br>
@@ -150,9 +127,7 @@ The results slightly change after the algorithm is repeated for several times:
 
 ## Support Vector Machine
 
-Support-vector machines (SVMs) are supervised learning machine learning models widely used for classification and regression tasks. In medical research, SVMs can be used to predict the health status of a patient for a target disease. In this experiment, we are going to train an SVM model to predict Diabetes. 
- 
-Please download the pima.csv file from Canvas and save it to the same directory as this Jupyter notebook and run the following code to load the datasets. 
+Support-vector machines (SVMs) are supervised learning machine learning models widely used for classification and regression tasks. In medical research, SVMs can be used to predict the health status of a patient for a target disease. In this experiment, we are going to train an SVM model to predict Diabetes. Please download the pima.csv file from Canvas and save it to the same directory as this Jupyter notebook and run the following code to load the datasets.
 
 <div align=center>
 <img width="605" src="https://george-chou.github.io/covers/MSSC/f15.png"/><br>
