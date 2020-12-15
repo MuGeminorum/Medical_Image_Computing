@@ -35,7 +35,7 @@ plt.show()
 
 <div align=center>
 <img width="605" src="https://george-chou.github.io/covers/MSSC/f2.png"/><br>
-<b>Figure 2: Results of task 1</b>
+<b>Figure 1: Results of task 1</b>
 </div>
 
 ## Edge Filters
@@ -60,7 +60,7 @@ plt.show()
 
 <div align=center>
 <img width="605" src="https://george-chou.github.io/covers/MSSC/f4.png"/><br>
-<b>Figure 4: Results of task 2(1)</b>
+<b>Figure 2: Results of task 2(1)</b>
 </div>
 
 (2)	Please define the Prewitt kernels in both x and y directions, and use the cv2.filter2D() function to complete prewitt edge filtering.
@@ -83,7 +83,7 @@ plt.show()
 
 <div align=center>
 <img width="605" src="https://george-chou.github.io/covers/MSSC/f6.png"/><br>
-<b>Figure 6: Results of task 2(2)</b>
+<b>Figure 3: Results of task 2(2)</b>
 </div>
 
 (3)	Please conducting a Canny edge detection with the function of feature.canny() and plot the results using imshow() function. Please briefly explain Canny edge detection. What are the values and meaning of the double thresholds used in your canny edge detection? Please change the lower and upper thresholds to (2, 5) and (3, 15), respectively; How does the edge detection change?
@@ -101,7 +101,7 @@ plt.show()
 
 <div align=center>
 <img width="605" src="https://george-chou.github.io/covers/MSSC/f8.png"/><br>
-<b>Figure 8: Results of task 2(3)</b>
+<b>Figure 4: Results of task 2(3)</b>
 </div>
 
 (4)	What is spatial frequency? Are edge filters low-pass filtering operation or high-pass filtering operation?
@@ -124,7 +124,7 @@ d)	Calculate the standard measurement function. If the method reaches the maximu
 
 <div align=center>
 <img width="605" src="https://george-chou.github.io/covers/MSSC/f9.png"/><br>
-<b>Figure 9: Process of K-means clustering</b>
+<b>Figure 5: Process of K-means clustering</b>
 </div>
 
 <div align=center><b>Table 1: Differences between supervised and unsupervised methods</b><br></div>
@@ -139,14 +139,14 @@ d)	Calculate the standard measurement function. If the method reaches the maximu
 | Accuracy of Results | Highly accurate and trustworthy method; | Less accurate and trustworthy method; |
 | Real Time Learning | Learning method takes place offline; | Learning method takes place in real time; |
 | Number of Classes | Number of classes is known; | Number of classes is not known; |
-| Main Drawback | Classifying big data can be a real challenge in Supervised Learning; | You cannot get precise information regarding data sorting, and the output as data used in unsupervised learning is labelled and not known; |
+| Main Drawback | Classifying big data can be a real challenge in Supervised Learning; | You cannot get precise information regarding data sorting, and the output as data used in unsupervised learning is labelled and not known. |
 
 <div align=center><b>Table 2: Advantages and disadvantages of supervised and unsupervised methods</b><br></div>
 
 | Method | Supervised | Unsupervised |
 | --- | --- | --- |
-| Advantages | Analyst has control over the classification; Processing is tied to specific areas of known identity; Errors can be detected and often rectified | No extensive prior knowledge of the study area is required; Opportunity for human error is minimised; Unique classes are recognised as distinct units; |
-| Disadvantages | Analyst imposes a structure on data, which may not match reality; Training classes are generally based on field identification and not on spectral properties hence spectral signatures are forced; Training data selected by the analyst may not be representative of conditions present throughout the image; Training data can be timeconsuming and costly; Unable to recognise and represent special or unique categories not represented in the training data; | Spectral classes are not necessarily information classes • Analyst has little control over classes; Spectral properties change over time hence detailed spectral knowledge of different features may be necessary; |
+| Advantages | Analyst has control over the classification; Processing is tied to specific areas of known identity; Errors can be detected and often rectified; | No extensive prior knowledge of the study area is required; Opportunity for human error is minimised; Unique classes are recognised as distinct units; |
+| Disadvantages | Analyst imposes a structure on data, which may not match reality; Training classes are generally based on field identification and not on spectral properties hence spectral signatures are forced; Training data selected by the analyst may not be representative of conditions present throughout the image; Training data can be timeconsuming and costly; Unable to recognise and represent special or unique categories not represented in the training data; | Spectral classes are not necessarily information classes; Analyst has little control over classes; Spectral properties change over time hence detailed spectral knowledge of different features may be necessary. |
 
 (2)	Import KMeans from the sklearn.cluster package.
 
@@ -181,7 +181,7 @@ for name, est in estimators:
 
 <div align=center>
 <img width="605" src="https://george-chou.github.io/covers/MSSC/f11.png"/><br>
-<b>Figure 11: Results of task 3(3)</b>
+<b>Figure 6: Results of task 3(3)</b>
 </div>
 
 (4)	If you repeat the algorithm for several times, will the results change?
@@ -190,7 +190,7 @@ The results slightly change after the algorithm is repeated for several times:
 
 <div align=center>
 <img width="605" src="https://george-chou.github.io/covers/MSSC/f12.png"/><br>
-<b>Figure 12: Results of task 3(4)</b>
+<b>Figure 7: Results of task 3(4)</b>
 </div>
 
 (5)	If 4 clusters are to be generated, please plot the relationship between withincluster sums of point-to-centroid distances (kmeans.inertia) and number of iterations (kmeans.n_iter). The x-axis corresponds to the number of iterations and the y-axis corresponds to the within-cluster sums.
@@ -214,7 +214,7 @@ plt.show()
 
 <div align=center>
 <img width="605" src="https://george-chou.github.io/covers/MSSC/f14.png"/><br>
-<b>Figure 14: Results of task 3(5)</b>
+<b>Figure 8: Results of task 3(5)</b>
 </div>
 
 ## Support Vector Machine
