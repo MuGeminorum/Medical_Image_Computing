@@ -136,15 +136,7 @@ d)	Calculate the standard measurement function. If the method reaches the maximu
 <div align=center><b>Table 2: Advantages and disadvantages of supervised and unsupervised methods</b><br></div>
 |Method|Supervised|Unsupervised|
 |:---|:---|:---|
-|Advantages|
-• Analyst has control over the classification 
-• Processing is tied to specific areas of known identity 
-• Errors can be detected and often rectified 
-|
-• No extensive prior knowledge of the study area is required 
-• Opportunity for human error is minimised 
-• Unique classes are recognised as distinct units
-|
+|Advantages|Analyst has control over the classification; Processing is tied to specific areas of known identity; Errors can be detected and often rectified|No extensive prior knowledge of the study area is required; Opportunity for human error is minimised; Unique classes are recognised as distinct units|
 
 (2)	Import KMeans from the sklearn.cluster package.
 
