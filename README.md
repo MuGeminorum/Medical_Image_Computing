@@ -132,18 +132,22 @@ d)	Calculate the standard measurement function. If the method reaches the maximu
 
 | ML technique | Supervised | Unsupervised |
 | --- | --- | --- |
-| Process | In a supervised learning model, input and output variables will be given. | In unsupervised learning model, only input data will be given. |
+| Process | In a supervised learning model, input and output variables will be given; | In unsupervised learning model, only input data will be given; |
+| Input Data | Algorithms are trained using labelled data; | Algorithms are used against data which is not labelled; |
+| Algorithms Used | SVM, NN, Linear and logistics regression, random forest, and Classification trees; | Unsupervised algorithms can be divided into different categories: like Cluster algorithms, Kmeans, Hierarchical clustering, etc; |
+| Computational Complexity | Supervised learning is a simpler method; | Unsupervised learning is computationally complex; |
+| Use of Data | Supervised learning model uses training data to learn a link between the input and the outputs; | Unsupervised learning does not use output data; |
+| Accuracy of Results | Highly accurate and trustworthy method; | Less accurate and trustworthy method; |
+| Real Time Learning | Learning method takes place offline; | Learning method takes place in real time; |
+| Number of Classes | Number of classes is known; | Number of classes is not known; |
+| Main Drawback | Classifying big data can be a real challenge in Supervised Learning; | You cannot get precise information regarding data sorting, and the output as data used in unsupervised learning is labelled and not known; |
 
 <div align=center><b>Table 2: Advantages and disadvantages of supervised and unsupervised methods</b><br></div>
 
 | Method | Supervised | Unsupervised |
 | --- | --- | --- |
-| Advantages | Analyst has control over the classification; Processing is tied to specific areas of known identity; Errors can be detected and often rectified | No extensive prior knowledge of the study area is required; Opportunity for human error is minimised; Unique classes are recognised as distinct units |
-
-| Left-aligned | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
-| git status   | git status     | git status    |
-| git diff     | git diff       | git diff      |
+| Advantages | Analyst has control over the classification; Processing is tied to specific areas of known identity; Errors can be detected and often rectified | No extensive prior knowledge of the study area is required; Opportunity for human error is minimised; Unique classes are recognised as distinct units; |
+| Disadvantages | Analyst imposes a structure on data, which may not match reality; Training classes are generally based on field identification and not on spectral properties hence spectral signatures are forced; Training data selected by the analyst may not be representative of conditions present throughout the image; Training data can be timeconsuming and costly; Unable to recognise and represent special or unique categories not represented in the training data; | Spectral classes are not necessarily information classes • Analyst has little control over classes; Spectral properties change over time hence detailed spectral knowledge of different features may be necessary; |
 
 (2)	Import KMeans from the sklearn.cluster package.
 
