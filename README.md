@@ -150,6 +150,11 @@ d)	Calculate the standard measurement function. If the method reaches the maximu
 |
 </div>
 
+|列名1|列名2|
+|:---|:---|
+|列1的内容1|列2的内容1|
+|列1的内容2|列2的内容2|
+
 (2)	Import KMeans from the sklearn.cluster package.
 
 ```
