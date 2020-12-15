@@ -19,6 +19,31 @@ The MRI data, D, is stored as a 157-by-189-by-68 NumPy array. You can show image
 <b>Figure 2: Results of task 1</b>
 </div>
 
+```
+import numpy as np
+from skimage import io
+from skimage import feature
+import cv2
+from scipy import ndimage
+%pylab inline
+import matplotlib.pyplot as plt
+
+D = io.imread("data/attention-mri.tif")
+print(D.shape)
+
+im_x = D[63,:,:]    #sagittal(x)
+im_y = D[:,63,:]    #coronal(y)
+im_z = D[:,:,15]    #transaxial(z)
+
+plt.subplot(1,3,1), plt.imshow(im_x, cmap = 'gray', aspect = 0.5)
+plt.title('Sagittal'), plt.xticks([]), plt.yticks([])
+plt.subplot(1,3,2), plt.imshow(im_y, cmap = 'gray', aspect = 0.5)
+plt.title('Coronal'), plt.xticks([]), plt.yticks([])
+plt.subplot(1,3,3), plt.imshow(im_z, cmap = 'gray')
+plt.title('Axial'), plt.xticks([]), plt.yticks([])
+plt.show()
+```
+
 ## Edge Filters
 
 Edge provides critical information about the shape of the region of interest (ROI) and serves as an important step in many segmentation algorithms. In this task, we work on the data in the axial view at slice 16 for edge detection. 
