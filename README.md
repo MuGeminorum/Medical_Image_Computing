@@ -128,15 +128,12 @@ d)	Calculate the standard measurement function. If the method reaches the maximu
 <b>Figure 9: Process of K-means clustering</b>
 </div>
 
-<div align=center>
-<b>Table 1: Differences between supervised and unsupervised methods</b><br>
+<div align=center><b>Table 1: Differences between supervised and unsupervised methods</b><br></div>
 |Parameters|Supervised machine learning technique|Unsupervised machine learning technique|
 |:---|:---|:---|
 |Process|In a supervised learning model, input and output variables will be given.|In unsupervised learning model, only input data will be given.|
-</div>
 
-<div align=center>
-<b>Table 2: Advantages and disadvantages of supervised and unsupervised methods</b><br>
+<div align=center><b>Table 2: Advantages and disadvantages of supervised and unsupervised methods</b><br></div>
 |Method|Supervised|Unsupervised|
 |:---|:---|:---|
 |Advantages|
@@ -148,12 +145,6 @@ d)	Calculate the standard measurement function. If the method reaches the maximu
 • Opportunity for human error is minimised 
 • Unique classes are recognised as distinct units
 |
-</div>
-
-|列名1|列名2|
-|:---|:---|
-|列1的内容1|列2的内容1|
-|列1的内容2|列2的内容2|
 
 (2)	Import KMeans from the sklearn.cluster package.
 
