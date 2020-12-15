@@ -67,10 +67,14 @@ The spatial frequency is an independent variable to describe the characteristics
 
 (1)	Please describe the process of k-means clustering. What is the difference between supervised and unsupervised methods? What are their advantages and disadvantages?
 
-Basic steps of k-means algorithm: 
-a)	Select k objects from the data as the initial cluster centres; 
-b)	Calculate the distance of each cluster object to the cluster centre to divide; 
-c)	Calculate each cluster centre again; 
+Basic steps of k-means algorithm:
+
+a)	Select k objects from the data as the initial cluster centres;
+
+b)	Calculate the distance of each cluster object to the cluster centre to divide;
+
+c)	Calculate each cluster centre again;
+
 d)	Calculate the standard measurement function. If the method reaches the maximum number of iterations, stop, otherwise, continue the operation.
 
 <div align=center>
