@@ -113,7 +113,7 @@ Basic steps of k-means algorithm:
 
 ### Answer of (2)
 
-'from sklearn.cluster import KMeans'
+`from sklearn.cluster import KMeans`
 
 ### Answer of (3)
 
@@ -159,4 +159,4 @@ Please download the pima.csv file from Canvas and save it to the same directory 
 <b>Figure 15: Code for task 4</b>
 </div>
 
-'Output: 0.6771653543307087'
+`Output: 0.6771653543307087`
