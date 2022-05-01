@@ -34,7 +34,7 @@ plt.show()
 ```
 
 <div align=center>
-<img width="605" src="https://george-chou.github.io/covers/MSSC/f1.png"/><br>
+<img width="605" src="https://george-chou-github-io.vercel.app/covers/MSSC/f1.png"/><br>
 <b>Figure 1: Results of task 1</b>
 </div>
 
@@ -59,7 +59,7 @@ plt.show()
 ```
 
 <div align=center>
-<img width="605" src="https://george-chou.github.io/covers/MSSC/f2.png"/><br>
+<img width="605" src="https://george-chou-github-io.vercel.app/covers/MSSC/f2.png"/><br>
 <b>Figure 2: Results of task 2(1)</b>
 </div>
 
@@ -82,7 +82,7 @@ plt.show()
 ```
 
 <div align=center>
-<img width="605" src="https://george-chou.github.io/covers/MSSC/f3.png"/><br>
+<img width="605" src="https://george-chou-github-io.vercel.app/covers/MSSC/f3.png"/><br>
 <b>Figure 3: Results of task 2(2)</b>
 </div>
 
@@ -100,7 +100,7 @@ plt.show()
 ```
 
 <div align=center>
-<img width="605" src="https://george-chou.github.io/covers/MSSC/f4.png"/><br>
+<img width="605" src="https://george-chou-github-io.vercel.app/covers/MSSC/f4.png"/><br>
 <b>Figure 4: Results of task 2(3)</b>
 </div>
 
@@ -119,7 +119,7 @@ c)	Calculate each cluster centre again;<br>
 d)	Calculate the standard measurement function. If the method reaches the maximum number of iterations, stop, otherwise, continue the operation.
 
 <div align=center>
-<img width="605" src="https://george-chou.github.io/covers/MSSC/f5.png"/><br>
+<img width="605" src="https://george-chou-github-io.vercel.app/covers/MSSC/f5.png"/><br>
 <b>Figure 5: Process of K-means clustering</b>
 </div>
 
@@ -176,7 +176,7 @@ for name, est in estimators:
 ```
 
 <div align=center>
-<img width="605" src="https://george-chou.github.io/covers/MSSC/f6.png"/><br>
+<img width="605" src="https://george-chou-github-io.vercel.app/covers/MSSC/f6.png"/><br>
 <b>Figure 6: Results of task 3(3)</b>
 </div>
 
@@ -185,7 +185,7 @@ for name, est in estimators:
 The results slightly change after the algorithm is repeated for several times:
 
 <div align=center>
-<img width="605" src="https://george-chou.github.io/covers/MSSC/f7.png"/><br>
+<img width="605" src="https://george-chou-github-io.vercel.app/covers/MSSC/f7.png"/><br>
 <b>Figure 7: Results of task 3(4)</b>
 </div>
 
@@ -209,7 +209,7 @@ plt.show()
 ```
 
 <div align=center>
-<img width="605" src="https://george-chou.github.io/covers/MSSC/f8.png"/><br>
+<img width="605" src="https://george-chou-github-io.vercel.app/covers/MSSC/f8.png"/><br>
 <b>Figure 8: Results of task 3(5)</b>
 </div>
 
