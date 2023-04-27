@@ -1,5 +1,5 @@
-from datasets import load_dataset
 from sklearn.svm import LinearSVC
+from datasets import load_dataset
 
 
 def main():
