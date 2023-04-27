@@ -22,7 +22,8 @@ def main():
         y_test.append(item_vals[-1])
 
     # Train
-    clf = LinearSVC(loss="hinge", random_state=42).fit(x_train, y_train)
+    clf = LinearSVC(loss="hinge", random_state=42,
+                    max_iter=2000000).fit(x_train, y_train)
 
     # Test
     print(clf.score(x_test, y_test))
