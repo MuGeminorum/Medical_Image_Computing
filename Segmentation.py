@@ -7,7 +7,7 @@ from sklearn.cluster import KMeans
 
 
 def main():
-    D = io.imread("data/attention-mri.tif")
+    D = io.imread("attention-mri.tif")
     print(D.shape)
 
     im_x = D[63, :, :]  # sagittal(x)
