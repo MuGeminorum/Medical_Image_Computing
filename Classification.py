@@ -4,9 +4,8 @@ from datasets import load_dataset
 
 def main():
     # Load data
-    data = load_dataset("george-chou/Pima")
-    trainset = data['train']
-    testset = data['test']
+    trainset = load_dataset("george-chou/Pima", split="train[:80%]")
+    testset = load_dataset("george-chou/Pima", split="train[-20%:]")
 
     # Preprocess data
     x_train, y_train, x_test, y_test = [], [], [], []
@@ -23,7 +22,7 @@ def main():
 
     # Train
     clf = LinearSVC(loss="hinge", random_state=42,
-                    max_iter=2000000).fit(x_train, y_train)
+                    max_iter=700000).fit(x_train, y_train)
 
     # Test
     print(clf.score(x_test, y_test))
