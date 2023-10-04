@@ -4,8 +4,8 @@ from datasets import load_dataset
 
 def main():
     # Load data
-    trainset = load_dataset("george-chou/Pima", split="train[:80%]")
-    testset = load_dataset("george-chou/Pima", split="train[-20%:]")
+    trainset = load_dataset("MuGeminorum/Pima", split="train[:80%]")
+    testset = load_dataset("MuGeminorum/Pima", split="train[-20%:]")
 
     # Preprocess data
     x_train, y_train, x_test, y_test = [], [], [], []
