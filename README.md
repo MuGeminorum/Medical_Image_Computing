@@ -1,12 +1,12 @@
 # MSSC
 Medical Signal Segmentation and Classification
 
-[![license](https://img.shields.io/github/license/george-chou/MSSC.svg)](https://github.com/george-chou/MSSC/blob/master/LICENSE)
-[![Python application](https://github.com/george-chou/MSSC/workflows/Python%20application/badge.svg)](https://github.com/george-chou/MSSC/actions)
+[![license](https://img.shields.io/github/license/MuGeminorum/MSSC.svg)](https://github.com/MuGeminorum/MSSC/blob/master/LICENSE)
+[![Python application](https://github.com/MuGeminorum/MSSC/workflows/Python%20application/badge.svg)](https://github.com/MuGeminorum/MSSC/actions)
 
 ## Wiki
 
-<https://github.com/george-chou/MSSC/wiki>
+<https://github.com/MuGeminorum/MSSC/wiki>
 
 ## Usage
 
