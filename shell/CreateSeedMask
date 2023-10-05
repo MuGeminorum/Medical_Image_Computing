@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+atlasIMG_DIR=$1
+atlasIMG=${atlasIMG_DIR}$2
+seedMask_DIR=$atlasIMG_DIR'seedMasks/'
+
+if [ ! -e  ${seedMask_DIR} ] ;then
+        echo ">>>>>>>>>>>>>> seedMask_DIR:"$seedMask_DIR
+        echo ">>>>>>>>>atlasIMG:"$atlasIMG
+  	mkdir $seedMask_DIR
+   
+
+min_i=`fslstats $atlasIMG -l 0.1 -R | cut -d ' ' -f1`
+max_i=`fslstats $atlasIMG -l 0.1 -R | cut -d ' ' -f2`
+echo "min_i:"${min_i}" max_i:"${max_i}
+
+for i in `seq 1 90` #`seq ${min_i/.0*/} ${max_i/.0*/}` 
+do
+  fslmaths $atlasIMG -thr $i -uthr $i -bin ${seedMask_DIR}${i}.nii.gz
+done
+	
+fi

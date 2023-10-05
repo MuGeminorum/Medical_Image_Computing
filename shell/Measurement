@@ -1,0 +1,109 @@
+#!/bin/bash
+
+#---------------- Folder Arrangement ------------#
+#                  |- train                      #
+#         |- Data -|- test                       #
+# ~/home -|- Packages                            #
+#         |- Output -|- train                    #
+#                    |- test                     #
+#------------------------------------------------#
+
+
+root_path='/home/admin'
+data_root=$root_path'/Data/'
+package_DIR=$root_path'/Packages/'
+
+output_path=$root_path'/Output/'
+train_output_path=$output_path'/train_means/'
+test_output_path=$output_path'/test_means/'
+train_grey_output_path=$output_path'/train_grey/'
+test_grey_output_path=$output_path'/test_grey/'
+floImg=$package_DIR'MNI152_T1_1mm_brain.nii.gz'
+aalImg=$package_DIR'aal.nii.gz'
+
+#====================  measurement =======================#
+echo "=============== begin measurement... ========"
+
+#----- processing training images
+cd $data_root'train_brain/'
+subIDs=`ls`
+
+for subID in $subIDs 
+do
+	echo "Processing training image "$subID
+     	fileext='.nii.gz'
+     	file=$subID
+     	basename $file $fileext
+     	filename="${file%%.*}"
+ 
+	aal=$filename"_transformed_aal"$fileext
+	atlasIMG_DIR=$output_path'train_aal/' 
+     	subGMMask=$train_grey_output_path$filename'_greymatter_mask'$fileext
+
+     	echo " >>>> Create measurements for "$filename"  <<<<<<"
+     	source ${root_path}/code/CreateSeedMask $atlasIMG_DIR $aal
+	echo "i am done!"
+     	seedMask_path=$atlasIMG_DIR'seedMasks/'
+ 	cd $seedMask_path
+	mask_IMGs=`ls | wc -l`	
+            
+     	echo -n $filename >> ${train_output_path}"AAL_statistics_volumn_train.csv"
+	for i in $(eval echo {1..$mask_IMGs});
+	do
+		#echo "i: "${i}
+          	#Calculate volume and save it into csv file
+          	#TODO
+		arr=($(fslstats $subGMMask -k ${i}$fileext -V))
+		echo "i: "${arr[0]}
+ 		echo -n ","${arr[0]} >> ${train_output_path}"AAL_statistics_volumn_train.csv"
+     	done	
+	#TODO
+	echo -e "" >> ${train_output_path}"AAL_statistics_volumn_train.csv"
+
+    	rm '-rf' $seedMask_path   
+     	cd $data_root'train_brain/'
+
+done
+
+#----- processing testing images
+cd $data_root'test_brain/'
+subIDs=`ls`
+
+for subID in $subIDs 
+do
+	echo "Processing testing image "$subID
+     	fileext='.nii.gz'
+     	file=$subID
+     	basename $file $fileext
+     	filename="${file%%.*}"
+ 
+	aal=$filename"_transformed_aal"$fileext
+	atlasIMG_DIR=$output_path'test_aal/' 
+     	subGMMask=$test_grey_output_path$filename'_greymatter_mask'$fileext
+
+     	echo " >>>> Create measurements for "$filename"  <<<<<<"
+     	source ${root_path}/code/CreateSeedMask $atlasIMG_DIR $aal
+	echo "i am done!"
+     	seedMask_path=$atlasIMG_DIR'seedMasks/'
+ 	cd $seedMask_path
+	mask_IMGs=`ls | wc -l`	
+            
+     	echo -n $filename >> ${test_output_path}"AAL_statistics_volumn_test.csv"
+	for i in $(eval echo {1..$mask_IMGs});
+	do
+		#echo "i: "${i}
+          	#Calculate volume and save it into csv file
+          	#TODO
+		arr=($(fslstats $subGMMask -k ${i}$fileext -V))
+		echo "i: "${arr[0]}
+ 		echo -n ","${arr[0]} >> ${test_output_path}"AAL_statistics_volumn_test.csv"
+     	done	
+	#TODO
+	echo -e "" >> ${test_output_path}"AAL_statistics_volumn_test.csv"
+
+    	rm '-rf' $seedMask_path   
+     	cd $data_root'test_brain/'
+
+done
+
+#==================== End of measurement  =========#
