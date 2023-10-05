@@ -2,4 +2,3 @@ __pycache__/*
 model/*
 test/*
 .vscode/*
-logs/*
