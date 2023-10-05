@@ -2,13 +2,13 @@
 
 Classifying AD patients and normal controls from brain images
 
-[![license](https://img.shields.io/github/license/MuGeminorum/AD-Prediction.svg)](https://github.com/MuGeminorum/AD-Prediction/blob/master/LICENSE)
-[![Python application](https://github.com/MuGeminorum/AD-Prediction/workflows/Python%20application/badge.svg)](https://github.com/MuGeminorum/AD-Prediction/actions)
-[![Github All Releases](https://img.shields.io/github/downloads-pre/MuGeminorum/AD-Prediction/v1.1/total)](https://github.com/MuGeminorum/AD-Prediction/releases)
+[![license](https://img.shields.io/github/license/MuGeminorum/Medical_Image_Computing.svg)](https://github.com/MuGeminorum/Medical_Image_Computing/blob/master/LICENSE)
+[![Python application](https://github.com/MuGeminorum/Medical_Image_Computing/workflows/Python%20application/badge.svg)](https://github.com/MuGeminorum/Medical_Image_Computing/actions)
+[![Github All Releases](https://img.shields.io/github/downloads-pre/MuGeminorum/Medical_Image_Computing/v1.1/total)](https://github.com/MuGeminorum/Medical_Image_Computing/releases)
 
 ## Wiki
 
-<https://github.com/MuGeminorum/AD-Prediction/wiki>
+<https://github.com/MuGeminorum/Medical_Image_Computing/wiki/Classifying-AD-patients-and-normal-controls-from-brain-images>
 
 ## Requirements
 ```
