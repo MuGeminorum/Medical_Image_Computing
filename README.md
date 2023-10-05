@@ -2,9 +2,9 @@
 
 Classifying Cell Images Using Deep Learning Models
 
-[![license](https://img.shields.io/github/license/MuGeminorum/AlexNet-HEp2-Classification.svg)](https://github.com/MuGeminorum/AlexNet-HEp2-Classification/blob/master/LICENSE)
-[![Python application](https://github.com/MuGeminorum/AlexNet-HEp2-Classification/workflows/Python%20application/badge.svg)](https://github.com/MuGeminorum/AlexNet-HEp2-Classification/actions)
-[![Github All Releases](https://img.shields.io/github/downloads-pre/MuGeminorum/AlexNet-HEp2-Classification/v1.2/total)](https://github.com/MuGeminorum/AlexNet-HEp2-Classification/releases)
+[![license](https://img.shields.io/github/license/MuGeminorum/Medical_Image_Computing.svg)](https://github.com/MuGeminorum/Medical_Image_Computing/blob/master/LICENSE)
+[![Python application](https://github.com/MuGeminorum/Medical_Image_Computing/workflows/Python%20application/badge.svg)](https://github.com/MuGeminorum/Medical_Image_Computing/actions)
+[![Github All Releases](https://img.shields.io/github/downloads-pre/MuGeminorum/Medical_Image_Computing/v1.2/total)](https://github.com/MuGeminorum/Medical_Image_Computing/releases)
 
 ## Requirements
 ```
@@ -15,13 +15,13 @@ pip install -r requirements.txt
 ```
 
 ## Wiki
-<https://github.com/MuGeminorum/AlexNet-HEp2-Classification/wiki>
+<https://github.com/MuGeminorum/Medical_Image_Computing/wiki/Classifying-Cell-Images-Using-Deep-Learning-Models>
 
 ## Usage
 ### Download
 ```
-git clone https://github.com/MuGeminorum/AlexNet-HEp2-Classification.git
-cd AlexNet-HEp2-Classification
+git clone -b hep2 https://github.com/MuGeminorum/Medical_Image_Computing.git
+cd Medical_Image_Computing
 ```
 
 ### Train
@@ -43,5 +43,5 @@ python evaluate.py --target ./test/Golgi.png
 
 ## Results
 | ![Figure_2](https://github.com/MuGeminorum/AlexNet-HEp2-Classification/assets/20459298/5355ea0d-58c2-46d5-9aa6-88d07b237ba9) | ![Figure_1](https://github.com/MuGeminorum/AlexNet-HEp2-Classification/assets/20459298/f8f14be5-a6db-494c-b11a-36b1a3b36a26) |
-| :--: | :--: |
-| **Loss curve** | **Training and validation accuracy** |
+| :--------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: |
+|                                                        **Loss curve**                                                        |                                             **Training and validation accuracy**                                             |
