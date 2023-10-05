@@ -1,6 +1,0 @@
-scikit-learn
-opencv-python
-scikit-image
-matplotlib
-autopep8
-datasets
