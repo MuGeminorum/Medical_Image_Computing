@@ -1,0 +1,70 @@
+#!/bin/bash
+
+
+#---------------- Folder Arrangement ------------#
+#                  |- train                      #
+#         |- Data -|- test                       #
+# ~/home -|- Packages                            #
+#         |- Output -|- train                    #
+#                    |- test                     #
+#------------------------------------------------#
+
+
+root_path='/home/admin'
+data_root=$root_path'/Data/'
+package_DIR=$root_path'/Packages/'
+
+output_path=$root_path'/Output/'
+train_output_path=$root_path'/Output/train/'
+test_output_path=$root_path'/Output/test/'
+
+#================== Grey matter segmentation ==========#
+echo "=============== begin grey matter segmentation...========"
+
+#----- processing training images
+cd $data_root'train_brain'
+subIDs=`ls`
+
+for subID in $subIDs 
+do
+	echo "Processing training image "$subID
+     	fileext='.nii.gz'
+     	file=$subID
+    	basename $file $fileext
+     	filename="${file%%.*}"
+
+     	#tissue segmentation
+     	base=$train_output_path$filename
+     	#TODO
+     	fast -S 1 -n 3 -t 1 -g -v -o $filename $filename$fileext
+	mv $filename"_seg_1"$fileext ${filename%%%%%%/*}"_greymatter_mask"$fileext
+	rm $filename"_pve*"
+	fslmaths $filename$fileext -mul ${filename%%%%%%/*}"_greymatter_mask"$fileext $filename"_greymatter"$fileext
+     	done
+
+
+#---- processing test images
+cd $data_root'test_brain'
+subIDs=`ls`
+
+for subID in $subIDs 
+do
+echo "Processing test image "$subID
+
+     	fileext='.nii.gz'
+     	file=$subID
+     	basename $file $fileext
+     	filename=$file
+     	filename="${file%%.*}"
+
+     	#tissue segmentation
+     	base=$test_output_path$filename
+     	#TODO
+     	fast -S 1 -n 3 -t 1 -g -v -o $filename $filename$fileext
+	mv $filename"_seg_1"$fileext ${filename%%%%%%/*}"_greymatter_mask"$fileext
+	rm $filename"_pve*"
+	fslmaths $filename$fileext -mul ${filename%%%%%%/*}"_greymatter_mask"$fileext $filename"_greymatter"$fileext
+done
+
+#Please carefully check the segmented grey matter mask visually using fsleyes to ensure the result is correct.#
+#============= End of Grey matter segmentation=================#
