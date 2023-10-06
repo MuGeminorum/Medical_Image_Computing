@@ -4,7 +4,7 @@ Classifying Cell Images Using Deep Learning Models
 
 [![license](https://img.shields.io/github/license/MuGeminorum/Medical_Image_Computing.svg)](https://github.com/MuGeminorum/Medical_Image_Computing/blob/master/LICENSE)
 [![Python application](https://github.com/MuGeminorum/Medical_Image_Computing/workflows/Python%20application/badge.svg)](https://github.com/MuGeminorum/Medical_Image_Computing/actions)
-[![Github All Releases](https://img.shields.io/github/downloads-pre/MuGeminorum/Medical_Image_Computing/v1.2/total)](https://github.com/MuGeminorum/Medical_Image_Computing/releases)
+[![Github All Releases](https://img.shields.io/github/downloads-pre/MuGeminorum/Medical_Image_Computing/v1.2/total)](https://github.com/MuGeminorum/Medical_Image_Computing/releases/tag/v1.2)
 [![](https://img.shields.io/badge/wiki-HEp2-3572a5.svg)](https://github.com/MuGeminorum/Medical_Image_Computing/wiki/Chapter-III-%E2%80%90-Classifying-Cell-Images-Using-Deep-Learning-Models)
 
 ## Requirements
