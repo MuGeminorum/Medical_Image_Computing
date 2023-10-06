@@ -7,10 +7,6 @@ Classifying AD patients and normal controls from brain images
 [![Github All Releases](https://img.shields.io/github/downloads-pre/MuGeminorum/Medical_Image_Computing/v1.0/total)](https://github.com/MuGeminorum/Medical_Image_Computing/releases)
 [![](https://img.shields.io/badge/wiki-AD_Prediction-89e051.svg)](https://github.com/MuGeminorum/Medical_Image_Computing/wiki/Chapter-II-%E2%80%90-Classifying-AD-patients-and-normal-controls-from-brain-images)
 
-## Wiki
-
-<https://github.com/MuGeminorum/Medical_Image_Computing/wiki>
-
 ## Requirements
 ```
 echo y | conda create -n svm
