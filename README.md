@@ -15,9 +15,6 @@ echo y | conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cu
 pip install -r requirements.txt
 ```
 
-## Wiki
-<https://github.com/MuGeminorum/Medical_Image_Computing/wiki/Classifying-Cell-Images-Using-Deep-Learning-Models>
-
 ## Usage
 ### Download
 ```
