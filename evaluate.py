@@ -29,7 +29,8 @@ if __name__ == "__main__":
     if not os.path.exists(saved_model_path):
         print('No trained model found, downloading one...')
         download_model(
-            'https://huggingface.co/MuGeminorum/alexnet-hep2/resolve/main/save.pt')
+            'https://github.com/MuGeminorum/Medical_Image_Computing/releases/download/v1.2/save.pt'
+        )
 
     model = torch.load(saved_model_path).to(device)
     torch.cuda.empty_cache()
