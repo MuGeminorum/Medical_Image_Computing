@@ -5,9 +5,11 @@ import torch.utils.data
 import torch.optim as optim
 import torchvision.models as models
 from torch.utils.data import DataLoader
+from modelscope.msdatasets import MsDataset
 from datasets import load_dataset
 from utils import *
-
+import warnings
+warnings.filterwarnings("ignore")
 
 parser = argparse.ArgumentParser(description='train')
 parser.add_argument('--lr', type=float, default=0.001, help='learning rate')
@@ -83,10 +85,16 @@ def transform(example_batch):
 
 def prepare_data():
     print('Preparing data...')
-    ds = load_dataset("MuGeminorum/HEp2")
-    trainset = ds['train'].with_transform(transform)
-    validset = ds['validation'].with_transform(transform)
-    testset = ds['test'].with_transform(transform)
+    try:
+        ds = load_dataset("MuGeminorum/HEp2")
+        trainset = ds['train'].with_transform(transform)
+        validset = ds['validation'].with_transform(transform)
+        testset = ds['test'].with_transform(transform)
+    except ConnectionError:
+        ds = MsDataset.load('MuGeminorum/HEp2', subset_name='default')
+        trainset = ds['train']._hf_ds.with_transform(transform)
+        validset = ds['validation']._hf_ds.with_transform(transform)
+        testset = ds['test']._hf_ds.with_transform(transform)
 
     traLoader = DataLoader(trainset, batch_size=4, shuffle=True, num_workers=2)
     valLoader = DataLoader(validset, batch_size=4, shuffle=True, num_workers=2)

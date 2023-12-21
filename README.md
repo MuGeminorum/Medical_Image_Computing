@@ -8,7 +8,7 @@ Classifying Cell Images Using Deep Learning Models
 [![](https://img.shields.io/badge/wiki-HEp2-3572a5.svg)](https://github.com/MuGeminorum/Medical_Image_Computing/wiki/Chapter-III-%E2%80%90-Classifying-Cell-Images-Using-Deep-Learning-Models)
 
 ## Requirements
-```
+```bash
 conda create -n hep2 python=3.9
 conda activate hep2
 echo y | conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
@@ -17,25 +17,25 @@ pip install -r requirements.txt
 
 ## Usage
 ### Download
-```
+```bash
 git clone -b hep2 https://github.com/MuGeminorum/Medical_Image_Computing.git
 cd Medical_Image_Computing
 ```
 
 ### Train
-```
+```bash
 python train.py
 ```
 Fetch your saved model at `./model/save.pt` after training.
 
 ### Draw training curves
-```
+```bash
 python plotter.py
 ```
 It will automatically find the latest log to plot.
 
 ### Predict
-```
+```bash
 python evaluate.py --target ./test/Golgi.png
 ```
 
