@@ -7,11 +7,11 @@ Medical Signal Segmentation and Classification
 
 ## Usage
 ### Classification
-```
+```bash
 python Classification.py
 ```
 
 ### Segmentation
-```
+```bash
 python Segmentation.py
 ```

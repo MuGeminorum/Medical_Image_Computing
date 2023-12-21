@@ -1,11 +1,20 @@
 from sklearn.svm import LinearSVC
+from modelscope.msdatasets import MsDataset
 from datasets import load_dataset
 
 
 def main():
     # Load data
-    trainset = load_dataset("MuGeminorum/Pima", split="train[:80%]")
-    testset = load_dataset("MuGeminorum/Pima", split="train[-20%:]")
+    try:
+        trainset = load_dataset("MuGeminorum/Pima", split="train")
+        testset = list(load_dataset("MuGeminorum/Pima", split="validation")) + \
+            list(load_dataset("MuGeminorum/Pima", split="test"))
+    except ConnectionError:
+        trainset = MsDataset.load(
+            'MuGeminorum/Pima', subset_name='default', split='train')
+        testset = list(MsDataset.load('MuGeminorum/Pima', subset_name='default', split='test')) + \
+            list(MsDataset.load('MuGeminorum/Pima',
+                 subset_name='default', split='validation'))
 
     # Preprocess data
     x_train, y_train, x_test, y_test = [], [], [], []
