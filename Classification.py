@@ -36,7 +36,7 @@ def main():
                     max_iter=700000).fit(x_train, y_train)
 
     # Test
-    print(clf.score(x_test, y_test))
+    print(f'{round(100.0 * clf.score(x_test, y_test), 2)}%')
 
 
 if __name__ == "__main__":
