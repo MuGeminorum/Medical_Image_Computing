@@ -1,6 +1,8 @@
 from sklearn.svm import LinearSVC
 from modelscope.msdatasets import MsDataset
 from datasets import load_dataset
+import warnings
+warnings.filterwarnings("ignore")
 
 
 def main():
