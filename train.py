@@ -63,14 +63,14 @@ def eval_model_test(model, tesLoader, device):
 def save_history(tra_acc_list, val_acc_list, loss_list):
     acc_len = len(tra_acc_list)
     timestamp = time_stamp()
-    with open("./logs/history-acc-" + timestamp + ".csv", "w", newline='') as csvfile:
+    with open(f"./logs/history-acc-{timestamp}.csv", "w", newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(["tra_acc_list", "val_acc_list"])
         for i in range(acc_len):
             writer.writerow([tra_acc_list[i], val_acc_list[i]])
 
     loss_len = len(loss_list)
-    with open("./logs/history-loss-" + timestamp + ".csv", "w", newline='') as csvfile:
+    with open(f"./logs/history-loss-{timestamp}.csv", "w", newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(["loss_list"])
         for i in range(loss_len):

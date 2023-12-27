@@ -2,8 +2,8 @@ import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from train import train
 from scipy import signal as ss
+from train import train
 from utils import *
 
 
