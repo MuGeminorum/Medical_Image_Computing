@@ -1,5 +1,4 @@
 # AD-Prediction
-
 Classifying AD patients and normal controls from brain images
 
 [![license](https://img.shields.io/github/license/MuGeminorum/Medical_Image_Computing.svg)](https://github.com/MuGeminorum/Medical_Image_Computing/blob/master/LICENSE)

@@ -1,5 +1,5 @@
-from sklearn.svm import LinearSVC
 from modelscope.msdatasets import MsDataset
+from sklearn.svm import LinearSVC
 from datasets import load_dataset
 import warnings
 warnings.filterwarnings("ignore")
@@ -8,20 +8,30 @@ warnings.filterwarnings("ignore")
 def main():
     # Load training data
     try:
-        trainset = load_dataset("MuGeminorum/AAL_statistics_volumn",
-                                data_files='AAL_statistics_volumn_labelled.csv', split='train[:-20%]')
+        trainset = load_dataset(
+            "MuGeminorum/AAL_statistics_volumn",
+            data_files='AAL_statistics_volumn_labelled.csv',
+            split='train[:-20%]'
+        )
 
-        testset = load_dataset("MuGeminorum/AAL_statistics_volumn",
-                               data_files='AAL_statistics_volumn_labelled.csv', split='train[-20%:]')
+        testset = load_dataset(
+            "MuGeminorum/AAL_statistics_volumn",
+            data_files='AAL_statistics_volumn_labelled.csv',
+            split='train[-20%:]'
+        )
 
-        unlabelled_data = load_dataset("MuGeminorum/AAL_statistics_volumn",
-                                       data_files='AAL_statistics_volumn_unlabelled.csv', split='train')
+        unlabelled_data = load_dataset(
+            "MuGeminorum/AAL_statistics_volumn",
+            data_files='AAL_statistics_volumn_unlabelled.csv',
+            split='train'
+        )
     except ConnectionError:
-        labelled_data = list(MsDataset.load(
-            'MuGeminorum/AAL_statistics_volumn', subset_name='default', split='train'))
-        unlabelled_data = list(MsDataset.load(
-            'MuGeminorum/AAL_statistics_volumn', subset_name='default', split='test'))
-
+        dataset = MsDataset.load(
+            'MuGeminorum/AAL_statistics_volumn',
+            subset_name='default'
+        )
+        labelled_data = list(dataset['train'])
+        unlabelled_data = list(dataset['test'])
         data_len = len(labelled_data)
         p80 = int(data_len * 0.8)
         trainset = labelled_data[:p80]
