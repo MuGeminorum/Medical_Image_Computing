@@ -165,18 +165,12 @@ class MedicalImageSegmentation:
         parent.title = "Task B - MIS"
         parent.categories = ["Assignment"]
         parent.dependencies = []
-        parent.contributors = ["""
-    Sidong Liu (USYD) 
-    Siqi Liu (Simense)
-    Zihao Tang (USYD)
-    Chaoyi Zhang (USYD)
-    """]
+        parent.contributors = ["MuGeminorum"]
         parent.helpText = """
     Task B. Medical Image Segmentation
     """
         parent.acknowledgementText = """
-    This python program shows a simple implementation of the 3D region growing based segmentation for 
-    the Assignment of COMP5424. 
+    This python program shows a simple implementation of the 3D region growing based segmentation
     """
         self.parent = parent
 

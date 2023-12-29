@@ -105,18 +105,12 @@ class MedicalImageEnhancement:
         parent.title = "Task A - MIE"
         parent.categories = ["Assignment"]
         parent.dependencies = []
-        parent.contributors = ["""
-    Sidong Liu (USYD) 
-    Siqi Liu (Simense)
-    Chaoyi Zhang (USYD)
-    Zihao Tang (USYD)
-    """]
+        parent.contributors = ["MuGeminorum"]
         parent.helpText = """
     Task A. Medical Image Enhancement
     """
         parent.acknowledgementText = """
-    This python program shows a simple implementation of the 3D convolution filtering for 
-    the Assignment of COMP5424. 
+    This python program shows a simple implementation of the 3D convolution filtering
     """
         self.parent = parent
 
