@@ -5,7 +5,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-def main():
+def svm():
     # Load data
     try:
         dataset = load_dataset("MuGeminorum/Pima")
@@ -40,4 +40,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    svm()
