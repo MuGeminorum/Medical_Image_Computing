@@ -1,2 +1,4 @@
 test/*
 logs/*
+__pycache__/*
+model/*
