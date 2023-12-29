@@ -1,3 +1,4 @@
 scikit-learn
 autopep8
 datasets
+modelscope
