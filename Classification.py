@@ -1,5 +1,5 @@
-from sklearn.svm import LinearSVC
 from modelscope.msdatasets import MsDataset
+from sklearn.svm import LinearSVC
 from datasets import load_dataset
 import warnings
 warnings.filterwarnings("ignore")
@@ -8,15 +8,12 @@ warnings.filterwarnings("ignore")
 def main():
     # Load data
     try:
-        trainset = load_dataset("MuGeminorum/Pima", split="train")
-        testset = list(load_dataset("MuGeminorum/Pima", split="validation")) + \
-            list(load_dataset("MuGeminorum/Pima", split="test"))
+        dataset = load_dataset("MuGeminorum/Pima")
     except ConnectionError:
-        trainset = MsDataset.load(
-            'MuGeminorum/Pima', subset_name='default', split='train')
-        testset = list(MsDataset.load('MuGeminorum/Pima', subset_name='default', split='test')) + \
-            list(MsDataset.load('MuGeminorum/Pima',
-                 subset_name='default', split='validation'))
+        dataset = MsDataset.load('MuGeminorum/Pima', subset_name='default')
+
+    trainset = dataset['train']
+    testset = list(dataset['validation']) + list(dataset['test'])
 
     # Preprocess data
     x_train, y_train, x_test, y_test = [], [], [], []
@@ -32,8 +29,11 @@ def main():
         y_test.append(item_vals[-1])
 
     # Train
-    clf = LinearSVC(loss="hinge", random_state=42,
-                    max_iter=700000).fit(x_train, y_train)
+    clf = LinearSVC(
+        loss="hinge",
+        random_state=42,
+        max_iter=700000
+    ).fit(x_train, y_train)
 
     # Test
     print(f'{round(100.0 * clf.score(x_test, y_test), 2)}%')

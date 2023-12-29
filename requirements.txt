@@ -4,3 +4,5 @@ scikit-image
 matplotlib
 autopep8
 datasets
+skimage
+modelscope
