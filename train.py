@@ -146,7 +146,8 @@ def train():
     optimizer = optim.SGD(model.classifier.parameters(), lr, momentum=0.9)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
         optimizer, mode='min', factor=0.1, patience=5, verbose=True,
-        threshold=lr, threshold_mode='rel', cooldown=0, min_lr=0, eps=1e-08)
+        threshold=lr, threshold_mode='rel', cooldown=0, min_lr=0, eps=1e-08
+    )
 
     # gpu
     torch.cuda.empty_cache()
