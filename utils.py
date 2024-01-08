@@ -6,8 +6,8 @@ from tqdm import tqdm
 from torchvision.transforms import *
 
 compose = Compose([
-    Resize(300),
-    CenterCrop(300),
+    Resize(224),
+    CenterCrop(224),
     RandomAffine(5),
     ToTensor(),
     Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
