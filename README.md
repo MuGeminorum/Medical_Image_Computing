@@ -17,9 +17,9 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-### Download
+### Maintenance
 ```bash
-git clone -b hep2 https://github.com/MuGeminorum/Medical_Image_Computing.git
+git clone -b hep2 git@github.com:MuGeminorum/Medical_Image_Computing.git
 cd Medical_Image_Computing
 ```
 
