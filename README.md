@@ -1,13 +1,12 @@
 # MIC
-Medical Image Computing Module Development
-
 [![license](https://img.shields.io/github/license/MuGeminorum/Medical_Image_Computing.svg)](https://github.com/MuGeminorum/Medical_Image_Computing/blob/master/LICENSE)
 [![Python application](https://github.com/MuGeminorum/Medical_Image_Computing/actions/workflows/python-app.yml/badge.svg?branch=mic)](https://github.com/MuGeminorum/Medical_Image_Computing/actions/workflows/python-app.yml)
 [![Github All Releases](https://img.shields.io/github/downloads-pre/MuGeminorum/Medical_Image_Computing/v1.1/total)](https://github.com/MuGeminorum/Medical_Image_Computing/releases/tag/v1.1)
 [![](https://img.shields.io/badge/wiki-mic-3572a5.svg)](https://github.com/MuGeminorum/Medical_Image_Computing/wiki/Chapter-I-%E2%80%90-Medical-image-computing)
 
-## Medical Image Enhancement (MIE) ##
+Medical Image Computing Module Development
 
+## Medical Image Enhancement (MIE)
 The source code of MIE is in _MedicalImageEnhancement.py_.
 
 _Table 1_ compares the three filters, including smoothing, sharpening, edge detection in the aspects of the kernel, experiment demo, and time cost of running. The way of achieving a filter is to use the filter to perform convolution operations on 3D images.
@@ -17,8 +16,7 @@ _Table 1_ compares the three filters, including smoothing, sharpening, edge dete
     <img width="455" src="https://user-images.githubusercontent.com/20459298/233113143-f6f0b426-17f5-4b38-8d13-d7ae4af03a9a.PNG"/>
 </div>
 
-## Medical Image Segmentation (MIS) ##
-
+## Medical Image Segmentation (MIS)
 The source code of MIS is in _MedicalImageSegmentation.py_.
 
 _Figure 1_ shows the demonstration of 3D segmentation results achieved using three multiple viewing angles.
