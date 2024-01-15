@@ -2,3 +2,4 @@ logs/*
 test/*
 __pycache__/*
 model/*
+rename.sh
